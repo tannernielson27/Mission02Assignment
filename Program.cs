@@ -2,7 +2,7 @@
 {
     private static void Main(string[] args)
     {
-   
+        // Gather Inputs and store them to be passed into the DiceRolls class
         Console.WriteLine("Welcome to the dice throwing simulator!");
         Console.WriteLine("How many dice rolls would you like to simulate?");
         string numberRollsString = Console.ReadLine();
@@ -11,10 +11,11 @@
         Console.WriteLine("Each \"*\" represents 1% of the total number of rolls.");
         Console.WriteLine("Total number of rolls = " + userChoice);
 
-        //Calculation
+        // Calculation
         DiceRolls mySimulator = new DiceRolls();
         int[] results = mySimulator.SimulateRolls(userChoice);
 
+        // For loop to calculate and display results
         for (int i = 2; i < results.Length; i++) {
             float count = results[i];
             float totalRolls = userChoice;

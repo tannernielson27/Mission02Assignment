@@ -1,10 +1,13 @@
 ﻿using System;
 
 public class DiceRolls
-{
+{   
+    // Create the method in the DiceRolls class
     public int[] SimulateRolls(int UserChoice)
-    {
+    {   
+        // Create an array to hold totals
         int[] totals = new int[13];
+        // Random calculations
         Random rnd = new Random();
         for (int i = 0; i < UserChoice; i++)
         {
